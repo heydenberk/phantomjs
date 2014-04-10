@@ -44,7 +44,7 @@
 
 #include <stddef.h>
 
-#define QT_VERSION_STR "4.8.5"
+#define QT_VERSION_STR   "4.8.5"
 /*
    QT_VERSION is (major << 16) + (minor << 8) + patch.
 */
@@ -54,9 +54,9 @@
 */
 #define QT_VERSION_CHECK(major, minor, patch) ((major<<16)|(minor<<8)|(patch))
 
-#define QT_PACKAGEDATE_STR "2013-06-07"
+#define QT_PACKAGEDATE_STR "YYYY-MM-DD"
 
-#define QT_PACKAGE_TAG "0529dc9b2542dcb46c2e2cc1a3422fc83c6ae6ef"
+#define QT_PACKAGE_TAG ""
 
 #if !defined(QT_BUILD_MOC)
 #include <QtCore/qconfig.h>
