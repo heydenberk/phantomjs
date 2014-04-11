@@ -17,7 +17,7 @@ echo "=> Copying sources..."
 echo "=> Creating source tarball under ${sourcedir}..."
 ( cd ${builddir}/.. && tar zcf ${sourcedir}/${name}-${version}.tar.gz ${name}-${version} )
 echo "=> Building RPM..."
-rpm=$(rpmbuild --define "_topdir ${topdir}" --buildroot ${buildroot} --clean -bb ${name}.spec 2>/dev/null | \
+rpm=$(rpmbuild --define "_topdir ${topdir}" --buildroot ${buildroot} --clean -ba ${name}.spec 2>/dev/null | \
 	awk '/\/RPMS\// { print $2; }')
 cp ${rpm} ${TMPDIR:-/tmp}/
 rm -fr ${topdir}
