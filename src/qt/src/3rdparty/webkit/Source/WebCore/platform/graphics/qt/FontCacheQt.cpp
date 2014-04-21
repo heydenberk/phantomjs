@@ -35,6 +35,7 @@
 #include <wtf/text/StringHash.h>
 
 #include <QFont>
+#include <QFontDatabase>
 #if HAVE(QRAWFONT)
 #include <QTextLayout>
 #endif
@@ -106,12 +107,10 @@ void FontCache::getTraitsInFamily(const AtomicString&, Vector<unsigned>&)
 
 FontPlatformData* FontCache::createFontPlatformData(const FontDescription& fontDescription, const AtomicString& familyName)
 {
-    FontPlatformData* platformData = new FontPlatformData(fontDescription, familyName);
-    if (!platformData->font().exactMatch()) {
-        delete platformData;
+    QFontDatabase db;
+    if (!db.hasFamily(familyName))
         return 0;
-    }
-    return platformData;
+    return new FontPlatformData(fontDescription, familyName);
 }
 
 } // namespace WebCore

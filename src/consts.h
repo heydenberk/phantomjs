@@ -35,7 +35,7 @@
 #define PHANTOMJS_VERSION_MAJOR     1
 #define PHANTOMJS_VERSION_MINOR     10
 #define PHANTOMJS_VERSION_PATCH     0
-#define PHANTOMJS_VERSION_STRING    "1.10.0 (development)"
+#define PHANTOMJS_VERSION_STRING    "1.10.0 (monetate2)"
 
 #define HTTP_HEADER_CONTENT_LENGTH      "content-length"
 #define HTTP_HEADER_CONTENT_TYPE        "content-type"
