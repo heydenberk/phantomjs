@@ -106,7 +106,12 @@ void FontCache::getTraitsInFamily(const AtomicString&, Vector<unsigned>&)
 
 FontPlatformData* FontCache::createFontPlatformData(const FontDescription& fontDescription, const AtomicString& familyName)
 {
-    return new FontPlatformData(fontDescription, familyName);
+    FontPlatformData* platformData = new FontPlatformData(fontDescription, familyName);
+    if (!platformData->font().exactMatch()) {
+        delete platformData;
+        return 0;
+    }
+    return platformData;
 }
 
 } // namespace WebCore
