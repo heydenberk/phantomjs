@@ -59,7 +59,7 @@
 #include <gifwriter.h>
 
 #include "phantom.h"
-#include "qfont_p.h"
+#include "/root/phantomjs/src/qt/include/QtGui/private/qfont_p.h"
 #include "networkaccessmanager.h"
 #include "utils.h"
 #include "config.h"
