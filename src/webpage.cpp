@@ -37,6 +37,7 @@
 #include <QDateTime>
 #include <QDir>
 #include <QFileInfo>
+#include <QFontCache>
 #include <QKeyEvent>
 #include <QMouseEvent>
 #include <QNetworkAccessManager>
@@ -899,6 +900,7 @@ void WebPage::release()
 }
 
 void WebPage::close() {
+    QFontCache::instance()->clear();
     deleteLater();
 }
 
