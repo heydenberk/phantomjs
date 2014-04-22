@@ -900,7 +900,7 @@ void WebPage::release()
 }
 
 void WebPage::close() {
-    QFontCache::instance()->clear();
+    QFontCache::cleanup();
     deleteLater();
 }
 
