@@ -37,7 +37,6 @@
 #include <QDateTime>
 #include <QDir>
 #include <QFileInfo>
-#include <QFontCache>
 #include <QKeyEvent>
 #include <QMouseEvent>
 #include <QNetworkAccessManager>
@@ -60,6 +59,7 @@
 #include <gifwriter.h>
 
 #include "phantom.h"
+#include "qfont_p.h"
 #include "networkaccessmanager.h"
 #include "utils.h"
 #include "config.h"

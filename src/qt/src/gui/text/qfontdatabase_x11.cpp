@@ -2122,11 +2122,7 @@ bool QFontDatabase::removeAllApplicationFonts()
 
 bool QFontDatabase::supportsThreadedFontRendering()
 {
-#if defined(QT_NO_FONTCONFIG)
-    return false;
-#else
-    return X11->has_fontconfig;
-#endif
+    return true;
 }
 
 QString QFontDatabase::resolveFontFamilyAlias(const QString &family)
